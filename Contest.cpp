@@ -2,9 +2,6 @@
 
 using namespace std;
 
-/* something starts */
-/* something ends */
-
 /* typedef starts */
 
 typedef long long ll;
@@ -18,7 +15,15 @@ typedef unsigned long long ull;
 
 /* macro ends */
 
+/* function starts */
 
+template<typename dataType>
+dataType nthGrayCode(dataType n) /// n is 0-based
+{
+    return (n ^ (n >> 1));
+}
+
+/* function ends */
 
 int main()
 {
