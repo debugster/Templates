@@ -53,6 +53,22 @@ void extractNumberFromString(string str, vector<dataType> &v)
     }
 }
 
+template<typename dataType>
+void generateAllSubset(vector<dataType> &data)
+{
+    int i, j, n;
+    n = data.size();
+
+    for (i = 0; i < (1 << n); i++) {
+        for (j = 0; j < n; j++) {
+            if (i & (1 << j)) {
+                cout << data[j] << " ";
+            }
+        }
+        cout << "\n";
+    }
+}
+
 /* function ends */
 
 int main()
