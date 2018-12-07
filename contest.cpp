@@ -53,6 +53,7 @@ void extractNumberFromString(string str, vector<dataType> &v)
     }
 }
 
+/// generates all possible subsets for the given set
 template<typename dataType>
 void generateAllSubset(vector<dataType> &data)
 {
