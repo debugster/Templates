@@ -24,35 +24,6 @@ dataType nthGrayCode(dataType n)
     return (n ^ (n >> 1));
 }
 
-/// extracts numbers from a string and pushes into vector
-template<typename dataType>
-void extractNumberFromString(string str, vector<dataType> &v)
-{
-    stringstream ss;
-
-    /* Storing the whole string into string stream */
-    ss << str;
-
-    /* Running loop till the end of the stream */
-    string temp;
-    dataType found;
-    v.clear();
-    while (!ss.eof()) {
-
-        /* extracting word by word from stream */
-        ss >> temp;
-
-        /* Checking the given word is integer or not */
-        if (stringstream(temp) >> found) {
-            //cout << found << " " << sizeof(found) << "\n";
-            v.push_back(found);
-        }
-
-        /* To save from space at the end of string */
-        temp = "";
-    }
-}
-
 /// generates all possible subsets for the given set
 template<typename dataType>
 void generateAllSubset(vector<dataType> &data)
