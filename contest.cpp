@@ -27,14 +27,19 @@
 #include <climits>
 #include <ctime>
 #include <cassert>
+#include <ext/pb_ds/assoc_container.hpp>    // PBDS
+#include <ext/pb_ds/tree_policy.hpp>        // PBDS
 
 using namespace std;
+using namespace __gnu_pbds;                 // PBDS
 
 /* typedef starts */
 
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<int, int> pii;
+typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> PBDS_INT;               // PBDS for int
+typedef tree<long long, null_type, less<long long>, rb_tree_tag, tree_order_statistics_node_update> PBDS_LL;    // PBDS for long long
 
 /* typedef ends */
 
@@ -52,6 +57,9 @@ typedef pair<int, int> pii;
 #define asinD(value) (asin(value) * 180.0) / PI
 #define acosD(value) (acos(value) * 180.0) / PI
 #define atanD(value) (atan(value) * 180.0) / PI
+
+#define value_at_index(x) find_by_order(x)
+#define index_of(x) order_of_key(x)
 
 /* macro ends */
 
@@ -85,12 +93,14 @@ void generateAllSubset(vector<dataType> &data)
 
 int main()
 {
-    //freopen("in.txt", "r", stdin);
-    //freopen("out.txt", "w", stdout);
+    #ifndef ONLINE_JUDGE
+        freopen("in.txt", "r", stdin);
+        freopen("out.txt", "w", stdout);
+    #endif
 
     fastIO;
 
-
+    
 
     return 0;
 }
